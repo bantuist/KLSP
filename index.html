@@ -1,0 +1,122 @@
+---
+layout: default
+title: Kalawa Library and School Project
+header_background_image: https://source.unsplash.com/0U_gjae2TKo/2000x1322?a=.pn
+newsletter_background_image: https://source.unsplash.com/c8ET5XvBwnU/2000x1322?a=.png
+---
+<!-- <header style="background-image: url({% include relative-src.html src=page.header_background_image %});"> -->
+<header style="background-image: url('{{ site.baseurl }}/images/photos/2013.jpg');">
+	<div class="container">
+		<div class="hero">
+			<h3 class="message">Help bring a modern education to rural Kenya</h3>
+			<div class="button">
+				<a href="#donate">Donate</a>
+				<a class="see-what-your-donations-do" href="#see-what-your-donations-do">See what your donations do</a>
+			</div>
+		</div>
+	</div>
+	<div class="learn-more">
+		<a href="#about-us">About us <span class="arrow">&#x25BC;</span></a>
+		/
+		<a href="#our-story">Our story <span class="arrow">&#x25BC;</span></a>
+	</div>
+</header>
+
+<section id="about-us">
+	<div class="container">
+		<h2 class="editable">What We Do</h2>
+
+		<ul class="thirds">
+			<li>
+				<div class="image"><img class="editable" alt="school" src="{{ site.baseurl }}/images/school_23715.svg" /></div>
+				<h3 class="editable">School</h3>
+				<p class="editable">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt, commodi!</p>
+			</li>
+
+			<li>
+				<div class="image"><img class="editable" alt="community" src="{{ site.baseurl }}/images/community_32441.svg" /></div>
+				<h3 class="editable">Community</h3>
+				<p class="editable">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, omnis.</p>
+			</li>
+
+			<li>
+				<div class="image"><img class="editable" alt="library" src="{{ site.baseurl }}/images/library_171322.svg" /></div>
+				<h3 class="editable">Library</h3>
+				<p class="editable">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, ea?</p>
+			</li>
+		</ul>
+	</div>
+</section>
+
+<section>
+	<div class="container mission">
+		<h2 class="editable">Our Mission</h2>
+		<p class="editable">
+			<img src="{{ site.baseurl }}/images/photos/mission.jpg" alt="parents" width="200" height="134">
+			Kalawa Library and School Project is a non-profit organization that brings a modern and caring education to rural communities in Makueni County, Kenya.
+		</p>
+	</div>
+</section>
+
+<section>
+	<div class="container">
+		<blockquote>
+			<p class="quote editable">If people have the opportunity for a good
+			education, they can learn how to find or create resources wherever they
+			live.</p>
+			<div class="attribute">
+				<p class="meta">
+					<span class="author editable"><strong>Gideon Kilonzo</strong><br />Founder</span>
+					<span class="image"><img class="editable" src="{{ site.baseurl }}/images/photos/founder.jpg"></span>
+				</p>
+			</div>
+		</blockquote>
+	</div>
+</section>
+
+<section class="newsletter" style="background-image: url({{ site.baseurl}}/images/photos/splash.jpg);">
+	<div class="container">
+		<h2 class="editable">Join us</h2>
+		<p class="join-us">We will let you know when there is news, updates, or opportunities to be a part of Kalawa Library and School Project.</p>
+		<form action="{{ site.newsletter_action }}" method="post">
+			<input type="text" name="EMAIL" placeholder="Email">
+			<input type="submit" value="Sign up"/>
+		</form>
+	</div>
+</section>
+
+<section id="donate">
+	<div class="container">
+		<h2 class="editable">Make a donation</h2>
+		<div class="donate">
+			{{ site.donorbox_embed }}
+		</div>
+	</div>
+</section>
+<section id="google-maps">
+	<div class="container">
+		<h2 class="editable">Map</h2>
+		<div class="map">
+			{{ site.google_maps_embed }}
+		</div>
+	</div>
+</section>
+<section>
+	<div class="container">
+<h2 class="editable">Updates</h2>
+		<p class="editor-link"><a href="cloudcannon:collections/_posts" class="btn"><strong>&#9998;</strong> Add Update</a></p>
+		{% for post in site.posts %}
+			{% assign author_id = post.author_staff_member | prepend: "/staff_members/" | append: "/" %}
+			{% assign author = site.staff_members | where: "url", author_id | first %}
+			<div id="{{ post.tag }}" class="post"">
+				<div class="post-title">
+					<img src="{{ site.baseurl }}/images/photos/founder.jpg" alt="Photo of {{ author.name }}" width="50" height="50" />
+					<h3>{{ post.title }}</h3>
+					<p class="date">{{ post.date | date: '%B %d, %Y' }}</p>
+				</div>
+				{{ post.content }}
+				<p class="editor-link"><a href="cloudcannon:collections/{{ post.path }}" class="btn"><strong>&#9998;</strong> Edit Update</a></p>
+			</div>
+		{% endfor %}
+	</div>
+</section>
