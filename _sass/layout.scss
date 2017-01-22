@@ -11,11 +11,12 @@
 	text-align: center;
 }
 
-// nav .button {
-// 	position: absolute;
-// 	right: 35px;
-// 	top: 10px;
-// }
+nav .sections {
+	position: absolute;
+	right: 35px;
+	top: 10px;
+}
+
 
 .thirds {
 	@media #{$desktop} {
@@ -198,6 +199,27 @@ footer {
 			color: #fff;
 		}
 	}
+}
+
+.post {
+	padding-top: 70px; // TODO Find a better way to scroll to anchor without hiding post title
+	clear: left;
+}
+.post p {
+	font-family: "PT Serif";
+	font-size: 20px;
+	line-height: 1.5em;
+	color: #1f0909;
+	text-align: left;
+}
+
+.post-image {
+	// display: block;
+	max-height: 500px;
+	margin-right: 20px;
+	float: left;
+	// border-radius: 10px;
+
 }
 .post-title {
 	img {
