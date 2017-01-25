@@ -98,18 +98,20 @@ header {
 
 	.hero {
 		display: flex;
-		flex-wrap: wrap;
-		justify-content: center;
-		position: relative;
-		top: 65%;
-	}
+		div {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			align-items: center;
+		}
+}
 
 	.message {
-
 		font-weight: 400;
 		font-size: 2.5em;
 	}
-	.button a {
+	.button {
+		margin: 20px;
 		text-shadow: none;
 		font-size: 1.4em;
 	}
@@ -129,11 +131,20 @@ section {
 }
 
 .featured-post {
-	color: white;
-	font-size: 24px;
-	text-decoration: none;
-	span {
-		display: block;
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	a {
+		color: white;
+		font-size: 20px;
+		text-decoration: none;
+		text-align: center;
+		img {
+			height: 140px;
+		}
+		span {
+			display: block;
+		}
 	}
 }
 form {
@@ -160,17 +171,16 @@ form {
 	font-weight: 100;
 }
 
-.button a, input[type="submit"] {
+.button, input[type="submit"] {
 	text-align: center;
-	// background: #5cb85c;
 	background: #70AAD0;
 	color: #fff;
 	cursor: pointer;
-	box-shadow: 0 2px 0 0 #408040;
 	font-size: 1.25em;
 }
 
-.button a {
+.button {
+	padding: 5px;
 	display: inline-block;
 	text-decoration: none;
 	border-radius: 3px;
