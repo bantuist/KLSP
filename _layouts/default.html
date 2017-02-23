@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
 	<head>
-		<!-- seo -->
+		<!-- SEO -->
 		<meta charset="utf-8">
 		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300" rel="stylesheet">
 		<link rel="stylesheet" href="{{ site.baseurl }}/css/screen.css">
@@ -20,67 +20,15 @@
 	</head>
 
 	<body>
-		<!-- NAVIGATION -->
-		<nav class="nav">
-			<div class="container">
-				<!-- <a href="{{ site.baseurl }}/"><img src="{{ site.baseurl }}/images/klsp_logo.png" height="35"/></a> -->
-				<a class="banner" href="#">
-					<img class="logo" src="{{ site.baseurl }}/images/logo.png" alt="Kalawa Library and School Project logo">
-					<span class="title">Kalawa Library and School Project</span>
-					<!-- <span class="subtitle"></span> -->
-				</a>
-				<div class="sections">
-					<a href="/#about">About</a>
-					<a href="/#updates">Updates</a>
-					<a href="/#contact">Contact</a>
-				</div>
-			</div>
-		</nav>
+		{% include navbar.html %}
 
-		<!-- MAIN CONTENT -->
+		<!-- Main content -->
 		<div class="content">
 			{{ content }}
 		</div>
 
-		<!-- FOOTER -->
-		<footer id='contact'>
-			<p class="editor-link" style="margin-bottom: 20px;"><a href="cloudcannon:collections/_data/company.yml" class="btn"><strong>&#9998;</strong> Update footer</a></p>
-			<div class="container">
-				<div class="about">
-					<p>{{ site.data.company.mission_statement }}</p>
-				</div>
+		{% include footer.html %}
 
-				<div class="contact">
-					<address>
-						<a href="https://www.google.com/maps/place/{{ site.data.company.address | url_encode }}">
-							{% include icons/footer.html icon="place" %} {{ site.data.company.address }}
-						</a>
-					</address>
-					<p class="email">
-						<a href="mailto:{{ site.data.company.email }}">
-							{% include icons/footer.html icon="email" %} {{ site.data.company.email }}
-						</a>
-					</p>
-					<p class="phone">
-						<a href="tel:{{ site.data.company.phone | replace: ' ', '-' }}">
-							{% include icons/footer.html icon="phone" %} {{ site.data.company.phone }}
-						</a>
-					</p>
-				</div>
-
-				<div class="sharing">
-					<a class="facebook" href="https://www.facebook.com/{{ site.data.company.facebook }}">
-						{% include icons/social-media.html social_icon="facebook" %}
-					</a>
-					<!-- <a class="twitter" href="https://twitter.com/{{ site.data.company.twitter }}"> -->
-						<!-- {% include icons/social-media.html social_icon="twitter" %} -->
-					<!-- </a> -->
-					<!-- <a class="google-plus" href="https://plus.google.com/{{ site.data.company.google_plus }}"> -->
-						<!-- {% include icons/social-media.html social_icon="google-plus" %} -->
-					<!-- </a> -->
-				</div>
-			</div>
-		</footer>
 		<p class="copyright">
 			<a href="https://cloudcannon.com/">
 				Template by CloudCannon
