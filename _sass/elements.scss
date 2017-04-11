@@ -86,13 +86,11 @@ header {
 	background-repeat: no-repeat;
 	height: 100vh;
 	color: #fff;
-
 	.hero {
 		margin: 70px auto;
 		font-weight: 400;
 		font-size: 2em;
 		text-shadow: 1px 1px 1px #000;
-
 		text-align: center;
 	}
 	.button {
@@ -100,39 +98,40 @@ header {
 		text-shadow: none;
 		font-size: 1.4em;
 	}
+	.learn-more {
+		display: none;
+	}
+}
 
-	.featured-post {
-		max-width: 600px;
-		margin: 300px auto;
-		// display: block;
-		// flex-wrap: wrap;
-		// flex-direction: column;
-		.button {
-			display: block;
-			margin: 0 auto;
-			padding: 5px;
-			width: 70px;
-		}
-		.button:hover {
+.featured-post {
+	display: block;
+	max-width: 600px;
+	margin: 0 auto;
+	.button {
+		display: block;
+		margin: 0 auto;
+		padding: 5px;
+		width: 70px;
+		&:hover {
 			background: #2980b9;
 		}
-		a {
-			color: white;
-			font-size: 16px;
-			text-decoration: none;
-			text-align: center;
-			img {
-				display: block;
-				margin: 0 auto;
-				height: 100px;
-				border-radius: 50%;
-			}
-			p {
-				margin: 10px 0;
-			}
+	}
+	a {
+		color: white;
+		font-size: 16px;
+		text-decoration: none;
+		text-align: center;
+		img {
+			display: block;
+			margin: 0 auto;
+			height: 100px;
+			border-radius: 50%;
+		}
+		p {
+			margin: 10px 0;
 		}
 	}
-	.learn-more {
+	@media handheld, only screen and (max-height: 600px) {
 		display: none;
 	}
 }
