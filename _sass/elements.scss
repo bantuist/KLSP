@@ -25,23 +25,6 @@ img {
 	max-width: 100%;
 }
 
-// h1 {
-// 	padding: 0;
-// 	margin: 0 0 20px 0;
-// 	font-size: 3.5em;
-// }
-
-// h2 {
-// 	font-size: 3em;
-// 	text-align: center;
-// 	margin: 0;
-// }
-
-// h3 {
-// 	font-size: 1.8em;
-// 	margin: 20px 0 20px 0;
-// }
-
 // Navigation elements
 .banner {
 	padding: 10px;
@@ -138,7 +121,7 @@ header {
 }
 
 #updates {
-	width: 600px;
+	max-width: 600px;
 	margin: auto;
 	// padding: 0 50px;
 }
@@ -193,8 +176,18 @@ form {
 .join-us {
 	text-align: center;
 }
+// QUESTION Why doesn't iframe resize when it is not selected without .donate/.map?
+.donate {
+	iframe {
+		max-width: 500px;
+		min-width: 310px;
 
-iframe {
-	width: 600px;
-	height: 400px;
+	}
+}
+.map {
+	margin: 0 auto;
+	max-width: 600px;
+	iframe {
+		width: 100%;
+	}
 }

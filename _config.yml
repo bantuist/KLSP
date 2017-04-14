@@ -21,7 +21,8 @@ defaults:
     values:
       layout: "default"
 
-donorbox_embed: '<script src="https://donorbox.org/widget.js" type="text/javascript"></script><iframe src="https://donorbox.org/embed/victor-and-caleb" height="685px" width="100%" style="max-width:500px; min-width:310px" seamless="seamless" id="dbox-form-embed" name="donorbox" frameborder="0" scrolling="no"></iframe>'
+donorbox_embed: '<script src="https://donorbox.org/widget.js" type="text/javascript"></script><iframe src="https://donorbox.org/embed/victor-and-caleb" height="685px" width="100%" seamless="seamless" id="dbox-form-embed" name="donorbox" frameborder="0" scrolling="no"></iframe>'
+
 newsletter_action: "//your-mailchimp-action-url.com"
 
-google_maps_embed: '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2733.81314496339!2d37.705197115174386!3d-1.6519677641992112!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1825143fb51bdf01%3A0x60d1474c9dccde64!2sSt.+Joseph+Academy+-+Kalawa!5e1!3m2!1sen!2sus!4v1484435049760" frameborder="0" style="border:0" allowfullscreen></iframe>'
+google_maps_embed: '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2733.81314496339!2d37.705197115174386!3d-1.6519677641992112!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1825143fb51bdf01%3A0x60d1474c9dccde64!2sSt.+Joseph+Academy+-+Kalawa!5e1!3m2!1sen!2sus!4v1484435049760" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>'
