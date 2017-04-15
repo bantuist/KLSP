@@ -1,7 +1,6 @@
 .container {
 	max-width: 900px;
 	margin: 0 auto;
-	// position: relative;
 	padding: 0 20px;
 	box-sizing: border-box;
 }
@@ -157,40 +156,35 @@ footer {
 }
 
 @media handheld, only screen and (max-width: 767px)  {
-	.container {
+	// QUESTION Why can't I select with .learn-more only?
+	.container .learn-more {
 		display: block;
-		.learn-more {
-			display: block;
-			position: absolute;
-			left: 0;
-			bottom: 20px;
-			text-align: center;
-			font-size: 1em;
-			width: 100%;
-
-			a {
-				text-decoration: none;
-				color: #fff;
-				opacity: .9;
-
-				&:hover {
-					opacity: 1;
-				}
+		position: absolute;
+		left: 0;
+		bottom: 20px;
+		text-align: center;
+		font-size: 1em;
+		width: 100%;
+		a {
+			text-decoration: none;
+			color: #fff;
+			opacity: .9;
+			&:hover {
+				opacity: 1;
 			}
-			.arrow {
-				font-size: .8em;
-				font-size: .4em;
-				position: relative;
-				top: -2px;
-			}
+		}
+		.arrow {
+			font-size: .8em;
+			font-size: .4em;
+			position: relative;
+			top: -2px;
 		}
 	}
 	.nav-links {
 		display: none;
 	}
 	.banner {
-		justify-content: center;
-		text-align: center;
+		margin: 0 auto;
 		.title {
 			font-size: 1em;
 		}
@@ -214,7 +208,7 @@ footer {
 }
 
 .post {
-	padding-top: 70px; // TODO Find a better way to scroll to anchor without hiding post title
+	padding-top: 20px;
 	clear: left;
 }
 .post p {

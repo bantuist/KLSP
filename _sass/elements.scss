@@ -17,12 +17,12 @@ body {
 }
 
 h2 {
-	margin: 0 auto;
+	margin: 0;
 	text-align: center;
 }
 
 img {
-	max-width: 100%;
+	max-width: 500px;
 }
 
 // Navigation elements
@@ -71,8 +71,7 @@ header {
 	height: 100vh;
 	color: #fff;
 	.hero {
-		margin: 70px auto;
-		font-weight: 400;
+		font-weight: bold;
 		font-size: 2em;
 		text-shadow: 1px 1px 1px #000;
 		text-align: center;
@@ -86,7 +85,12 @@ header {
 		display: none;
 	}
 }
-
+.overlay {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 85vh;
+}
 .featured-post {
 	display: block;
 	max-width: 600px;
@@ -121,13 +125,10 @@ header {
 }
 
 #updates {
-	max-width: 600px;
-	margin: auto;
-	// padding: 0 50px;
 }
 
 section {
-	padding: 60px 0;
+	padding-top: 20px;
 	// background: whitesmoke;
 }
 
