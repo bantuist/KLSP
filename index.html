@@ -2,9 +2,6 @@
 layout: default
 title: Kalawa Library and School Project
 ---
-
-
-<!-- About -->
 <section id="about">
 	<div class="container">
 		<h2>What We Do</h2>
@@ -29,9 +26,7 @@ title: Kalawa Library and School Project
 		</ul>
 	</div>
 </section>
-
-<!-- Mission -->
-<section>
+<section id="mission">
 	<div class="container mission">
 		<h2 class="editable">Our Mission</h2>
 		<img src="{{ site.baseurl }}/images/photos/mission.jpg" alt="parents" width="200" height="134">
@@ -39,9 +34,7 @@ title: Kalawa Library and School Project
 		<a href="#KLSP-story">Read our story</a>
 	</div>
 </section>
-
-<!-- Quote -->
-<section>
+<section id="quote">
 	<div class="container">
 		<blockquote>
 			<p class="quote">
@@ -56,7 +49,6 @@ title: Kalawa Library and School Project
 		</blockquote>
 	</div>
 </section>
-
 <!-- Newsletter -->
 <!-- <section class="newsletter" style="background-image: url({{ site.baseurl}}/images/photos/splash.jpg);">
 	<div class="container">
@@ -68,8 +60,6 @@ title: Kalawa Library and School Project
 		</form>
 	</div>
 </section> -->
-
-<!-- Donate -->
 <section id="donate">
 	<div class="container">
 		<h2 class="editable">Make a donation</h2>
@@ -78,8 +68,6 @@ title: Kalawa Library and School Project
 		</div>
 	</div>
 </section>
-
-<!-- Google Maps -->
 <section id="google-maps">
 	<div class="container">
 		<h2 class="editable">Map</h2>
@@ -88,22 +76,22 @@ title: Kalawa Library and School Project
 		</div>
 	</div>
 </section>
-
-<!-- Updates -->
 <section id='updates'>
 	<div class="container">
 		<h2 class="editable">Updates</h2>
 		<!-- <p class="editor-link"><a href="cloudcannon:collections/_posts" class="btn"><strong>&#9998;</strong> Add Update</a></p> -->
 		{% for post in site.posts %} {% assign author_id = post.author_staff_member | prepend: "/staff_members/" | append: "/" %} {% assign author = site.staff_members | where: "url", author_id | first %}
 		<div id="{{ post.tag }}" class="post">
-			<div class="post-title ">
-					<img src="{{ site.baseurl }}/images/photos/founder.jpg " alt="Photo of {{ author.name }} " width="50 " height="50 " />
-					<h3>{{ post.title }}</h3>
-					<p class="date ">{{ post.date | date: '%B %d, %Y' }}</p>
-				</div>
-				{{ post.content }}
-				<p class="editor-link "><a href="cloudcannon:collections/{{ post.path }} " class="btn "><strong>&#9998;</strong> Edit Update</a></p>
+			<div class="post-header">
+				<img src="{{ site.baseurl }}/images/photos/founder.jpg " alt="Photo of {{ author.name }} " width="50 " height="50 " />
+				<h3>{{ post.title }}</h3>
+				<p class="date ">{{ post.date | date: '%B %d, %Y' }}</p>
 			</div>
+			<div class="post-content">
+				{{ post.content }}
+			</div>
+			<p class="editor-link "><a href="cloudcannon:collections/{{ post.path }} " class="btn "><strong>&#9998;</strong> Edit Update</a></p>
+		</div>
 		{% endfor %}
 	</div>
 </section>

@@ -6,10 +6,15 @@
 }
 
 nav {
+
 	display: flex;
 	justify-content: space-between;
 }
 
+.post-header, .post-content {
+	margin: 0 auto;
+	max-width: 600px;
+}
 .donate, .map {
 	text-align: center;
 }
@@ -210,24 +215,24 @@ footer {
 .post {
 	padding-top: 20px;
 	clear: left;
+	p {
+		font-family: "PT Serif";
+		font-size: 20px;
+		line-height: 1.5em;
+		color: #1f0909;
+		text-align: left;
+	}
 }
-.post p {
-	font-family: "PT Serif";
-	font-size: 20px;
-	line-height: 1.5em;
-	color: #1f0909;
-	text-align: left;
+.post-content p {
+	.post-image {
+		display: block;
+		margin: 0 auto;
+		padding-top: 10px;
+		max-height: 400px;
+		max-width: 500px;
+	}
 }
-
-.post-image {
-	// display: block;
-	max-height: 500px;
-	margin-right: 20px;
-	float: left;
-	// border-radius: 10px;
-
-}
-.post-title {
+.post-header {
 	img {
 		border-radius: 200px;
 		display: inline-block;

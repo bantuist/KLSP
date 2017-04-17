@@ -21,10 +21,6 @@ h2 {
 	text-align: center;
 }
 
-img {
-	max-width: 500px;
-}
-
 // Navigation elements
 .banner {
 	padding: 10px;
@@ -122,9 +118,6 @@ header {
 	@media handheld, only screen and (max-height: 600px) {
 		display: none;
 	}
-}
-
-#updates {
 }
 
 section {

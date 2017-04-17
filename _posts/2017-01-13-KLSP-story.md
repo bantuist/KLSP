@@ -5,7 +5,7 @@ date: 2017-01-13
 tag: KLSP-story
 ---
 
-![First buildings and Kenyan flag]({{ site.baseurl }}/images/photos/flag.jpg)
+![First buildings and Kenyan flag]({{ site.baseurl }}/images/photos/flag.jpg){:.post-image}
 
 While visiting rural Kalawa, Kenya, one is struck by the bleak living conditions of the people in contrast to the beauty and allure of Africa. Mud, thatched homes, crude outhouses (many homes without a out house), no electricity, compromised water sources . . . all speak to the glaring poverty of people with limited resources, limited employment, limited healthcare, and limited education.
 
